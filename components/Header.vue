@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 @font-face {
     font-family: 'deftone-stylus';
     src: url('fonts/deftone-stylus.ttf');

@@ -10,12 +10,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .pp-title {
     font-family: 'deftone-stylus';
     font-size: 150px;
-    a {
-        text-decoration: none;
-    }
+}
+
+.pp-title > a {
+    text-decoration: none;
 }
 </style>
