@@ -2,6 +2,7 @@
     <header id="pp-header">
         <div class="pp-title">
             <a href="/">HKC Tech.</a>
+            <div class="pp-solgan">< WTF /></div>
         </div>
     </header>
 </template>
@@ -25,5 +26,9 @@ export default {
 .pp-title > a {
     color: #000;
     text-decoration: none;
+}
+
+.pp-solgan {
+    font-size: 20px;
 }
 </style>
