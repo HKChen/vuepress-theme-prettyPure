@@ -27,9 +27,5 @@
     "@fortawesome/vue-fontawesome": "^0.1.2",
     "vue": "^2.5.17"
   },
-  "devDependencies": {
-    "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0",
-    "webpack": "^4.26.0"
-  }
+  "devDependencies": {}
 }

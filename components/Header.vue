@@ -12,4 +12,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scr="@theme/styles/header.scss" />
+<style lang="scss">
+@font-face {
+    font-family: 'deftone-stylus';
+    src: url('fonts/deftone-stylus.ttf');
+}
+</style>
