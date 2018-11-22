@@ -22,6 +22,6 @@ export default {
 <style>
 @font-face {
     font-family: 'deftone-stylus';
-    src: url('fonts/deftone-stylus.ttf');
+    src: url(fonts/deftone-stylus.ttf);
 }
 </style>

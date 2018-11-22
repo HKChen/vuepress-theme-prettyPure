@@ -1,6 +1,6 @@
 <template>
     <footer id="pp-footer">
-        <p>Copyright © HK Chen</p>
+        <p class="pp-footer-text">Copyright © HK Chen</p>
     </footer>
 </template>
 
@@ -9,3 +9,9 @@ export default {
     name: 'Footer'
 }
 </script>
+
+<style>
+.pp-footer-text {
+    text-align: center;
+}
+</style>
