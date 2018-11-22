@@ -1,6 +1,6 @@
 <template>
     <header id="pp-header">
-        <div id="pp-title">
+        <div class="pp-title">
             <a href="/">HKC Tech.</a>
         </div>
     </header>
@@ -13,8 +13,12 @@ export default {
 </script>
 
 <style>
-@font-face {
+.pp-title {
     font-family: 'deftone-stylus';
-    src: url('fonts/deftone-stylus.ttf');
+    font-size: 150px;
+}
+
+.pp-title > a {
+    text-decoration: none;
 }
 </style>
