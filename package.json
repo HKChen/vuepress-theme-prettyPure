@@ -1,0 +1,29 @@
+{
+  "name": "vuepress-theme-prettypure",
+  "version": "1.0.1",
+  "description": "vupress theme By HK Chen",
+  "main": "Layout.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HKChen/vuepress-theme-prettyPure.git"
+  },
+  "keywords": [
+    "vuepress"
+  ],
+  "author": "HK Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HKChen/vuepress-theme-prettyPure/issues"
+  },
+  "homepage": "https://github.com/HKChen/vuepress-theme-prettyPure#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.5.0",
+    "@fortawesome/free-regular-svg-icons": "^5.5.0",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/vue-fontawesome": "^0.1.2"
+  }
+}
