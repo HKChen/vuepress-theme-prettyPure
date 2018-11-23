@@ -18,4 +18,4 @@ export default {
 }
 </script>
 
-<style src="./styles/footer.css" />
+<style src="../components/styles/footer.css" />
