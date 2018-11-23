@@ -18,13 +18,4 @@ export default {
 }
 </script>
 
-<style>
-.pp-footer-text {
-    text-align: center;
-}
-
-.pp-footer-text > a {
-    color: #000;
-    text-decoration: none;
-}
-</style>
+<style src="./styles/footer.css" />

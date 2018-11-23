@@ -24,9 +24,4 @@ export default {
 }
 </script>
 
-<style>
-@font-face {
-    font-family: 'deftone-stylus';
-    src: url(fonts/deftone-stylus.ttf);
-}
-</style>
+<style src="./styles/theme.css" />
