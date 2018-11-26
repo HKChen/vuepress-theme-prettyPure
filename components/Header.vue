@@ -1,8 +1,8 @@
 <template>
     <header id="pp-header">
         <div class="pp-title">
-            <a href="/">HKC Tech.</a>
-            <div class="pp-solgan">< WTF /></div>
+            <router-link :to="$localePath">{{ $site.title }}</router-link>
+            <div class="pp-solgan">{{ $site.description }}</div>
         </div>
     </header>
 </template>
