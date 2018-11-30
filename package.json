@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-prettypure",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "vupress theme By HK Chen",
   "main": "Layout.vue",
   "scripts": {
