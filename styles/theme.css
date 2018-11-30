@@ -2,3 +2,7 @@
     font-family: 'deftone-stylus';
     src: url(../fonts/deftone-stylus.ttf);
 }
+
+a {
+    text-decoration: none;
+}

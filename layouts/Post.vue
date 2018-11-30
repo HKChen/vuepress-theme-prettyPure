@@ -19,13 +19,19 @@
                     </li>
                 </ul>
             </div>
+            <PostNav />
         </article>
         {{ $page }}
     </div>
 </template>
 
 <script>
+import PostNav from '@theme/components/PostNav'
+
 export default {
+    components: {
+        PostNav
+    },
     filters : {
         dateFormat (date) {
             return date.substring(0,10)

@@ -39,21 +39,21 @@ export default {
         }
     },
     mounted() {
-    // progress bar configuration
-    nprogress.configure({ showSpinner: false })
+        // progress bar configuration
+        nprogress.configure({ showSpinner: true })
 
-    this.$router.beforeEach((to, from, next) => {
-      if (to.path !== from.path) {
-        nprogress.start()
-      }
+        this.$router.beforeEach((to, from, next) => {
+            if (to.path !== from.path) {
+                nprogress.start()
+            }
 
-      next()
-    })
+            next()
+        })
 
-    this.$router.afterEach(() => {
-      nprogress.done()
-    })
-  }
+        this.$router.afterEach(() => {
+            nprogress.done()
+        })
+    }
 }
 </script>
 

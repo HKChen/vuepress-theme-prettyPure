@@ -15,20 +15,20 @@ import PostPreview from '@theme/components/PostPreview'
 
 export default {
     components: {
-    PostPreview
-  },
-  props: {
-    filter: {
-      type: String && Function,
-      default: null
+        PostPreview
     },
-    fullWidth: {
-      required: false,
-      default: false
+    props: {
+        filter: {
+            type: String && Function,
+            default: null
+        },
+        fullWidth: {
+            required: false,
+            default: false
+        }
+    },
+    mounted() {
+        this.fullWidth
     }
-  },
-  mounted() {
-    this.fullWidth
-  }
 }
 </script>

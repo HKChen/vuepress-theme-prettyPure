@@ -13,4 +13,4 @@ export default {
 }
 </script>
 
-<style src="../components/styles/header.css" />
+<style src="../styles/header.css" />

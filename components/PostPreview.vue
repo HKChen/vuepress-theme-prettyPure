@@ -37,12 +37,4 @@ export default {
 }
 </script>
 
-<style>
-.post-wrapper {
-    text-align: center;
-}
-
-.post-title-text {
-    color: rgb(51, 207, 247);
-}
-</style>
+<style src="../styles/postPreview.css" />
