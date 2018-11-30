@@ -6,20 +6,18 @@
         <section class="post-links">
             文章導頁(test)
             <router-link
-                v-if="prevPost"
-                :to="prevPost.path"
+                v-if="nextPost"
+                :to="nextPost.path"
                 class="post-link"
             >
                 << {{ nextPost.title }}
             </router-link>
 
             <router-link
-                v-if="nextPost"
-                :to="nextPost.path"
+                v-if="prevPost"
+                :to="prevPost.path"
                 class="post-link"
             >
-                {{ nextPost.title }} >>
-
                 {{ prevPost.title }} >>
             </router-link>
         </section>
@@ -47,3 +45,5 @@ export default {
     }
 }
 </script>
+
+<style src="../styles/postNav.css" />
