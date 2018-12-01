@@ -19,18 +19,18 @@
                     </li>
                 </ul>
             </div>
-            <PostNav />
+            <PostNavigation />
         </article>
         {{ $page }}
     </div>
 </template>
 
 <script>
-import PostNav from '@theme/components/PostNav'
+import PostNavigation from '@theme/components/PostNavigation'
 
 export default {
     components: {
-        PostNav
+        PostNavigation
     },
     filters : {
         dateFormat (date) {

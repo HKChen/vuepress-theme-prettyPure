@@ -26,7 +26,7 @@
 
 <script>
 export default {
-    name: 'PostNav',
+    name: 'PostNavigation',
 
     computed: {
         thisIndex() {
@@ -46,4 +46,4 @@ export default {
 }
 </script>
 
-<style src="../styles/postNav.css" />
+<style src="../styles/postNavigation.css" />
