@@ -15,10 +15,6 @@ import Header from '@theme/components/Header'
 import Home from '@theme/layouts/Home'
 import Post from '@theme/layouts/Post'
 import Footer from '@theme/components/Footer'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.config.productionTip = false
 
 export default {
     name: 'Layout',
