@@ -2,6 +2,11 @@
     text-align: center;
 }
 
-.pp-footer-text > a {
+.pp-footer-text>a {
     color: #000;
+}
+
+.pp-footer-github {
+    font-family: 'FontAwesome';
+    content: '\f113';
 }
