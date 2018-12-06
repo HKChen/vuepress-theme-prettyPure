@@ -22,15 +22,18 @@
             <PostNavigation />
         </article>
         {{ $page }}
+        <Disqus />
     </div>
 </template>
 
 <script>
 import PostNavigation from '@theme/components/PostNavigation'
+import Disqus from '@theme/components/Disqus'
 
 export default {
     components: {
-        PostNavigation
+        PostNavigation,
+        Disqus
     },
     filters : {
         dateFormat (date) {
