@@ -43,17 +43,4 @@ export default {
 }
 </script>
 
-<style>
-.post-title {
-    color: rgb(51, 207, 247);
-    font-family: 'deftone-stylus';
-    font-size: 40px;
-    text-align: center;
-}
-
-.post-tags > ul > li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0 10px;
-}
-</style>
+<style src="../styles/post.css" />

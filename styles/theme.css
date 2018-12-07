@@ -5,12 +5,12 @@
 }
 
 @font-face {
-    font-family: 'wqy-microhei';
-    src: url(../fonts/wqy-microhei.ttc);
+    font-family: 'DroidSansFallback';
+    src: url(../fonts/DroidSansFallback.ttf);
 }
 
 body {
-    font-family: 'wqy-microhei'
+    font-family: 'DroidSansFallback'
 }
 
 a {
