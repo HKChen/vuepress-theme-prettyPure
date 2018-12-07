@@ -4,6 +4,8 @@ import { faGithubAlt }from '@fortawesome/free-brands-svg-icons'
 //import themeMixin from './mixins/themeMixin'
 
 export default ({ Vue, options, router, siteData: { themeConfig } }) => {
+    library.add(faGithubAlt)
+
     Vue.mixin({
         computed: {
             ...postMixin.computed,
