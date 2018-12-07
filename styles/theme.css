@@ -1,8 +1,16 @@
 @import url(../styles/vendor/font-awesome.min.css);
-
 @font-face {
     font-family: 'deftone-stylus';
     src: url(../fonts/deftone-stylus.ttf);
+}
+
+@font-face {
+    font-family: 'wqy-microhei';
+    src: url(../fonts/wqy-microhei.ttc);
+}
+
+body {
+    font-family: 'wqy-microhei'
 }
 
 a {
