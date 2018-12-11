@@ -1,4 +1,5 @@
 @import url(../styles/vendor/font-awesome.min.css);
+
 @font-face {
     font-family: 'deftone-stylus';
     src: url(../fonts/deftone-stylus.ttf);
@@ -9,8 +10,9 @@
     src: url(../fonts/DroidSansFallback.ttf);
 }
 
-body {
-    font-family: 'DroidSansFallback'
+html, body {
+    font-family: 'DroidSansFallback';
+    margin: 0 auto;
 }
 
 a {

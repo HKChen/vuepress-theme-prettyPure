@@ -1,7 +1,11 @@
 import postMixin from '@theme/mixins/postMixin'
+import VueHighlightJs from 'vue-highlight.js';
+import 'highlight.js/styles/dark.css';
 //import themeMixin from './mixins/themeMixin'
 
 export default ({ Vue, options, router, siteData: { themeConfig } }) => {
+    Vue.use(VueHighlightJs)
+
     Vue.mixin({
         computed: {
             ...postMixin.computed,
