@@ -1,5 +1,5 @@
 <template>
-    <header id="pp-header">
+    <header class="pp-header">
         <div class="pp-title">
             <router-link :to="$localePath">{{ $site.title }}</router-link>
             <div class="pp-solgan">{{ $site.description }}</div>

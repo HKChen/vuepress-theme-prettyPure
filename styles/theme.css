@@ -1,17 +1,12 @@
 @import url(../styles/vendor/font-awesome.min.css);
 
 @font-face {
-    font-family: 'deftone-stylus';
-    src: url(../fonts/deftone-stylus.ttf);
-}
-
-@font-face {
-    font-family: 'DroidSansFallback';
-    src: url(../fonts/DroidSansFallback.ttf);
+    font-family: 'eutemia';
+    src: url(../fonts/eutemia-i.italic.ttf);
 }
 
 html, body {
-    font-family: 'DroidSansFallback';
+    font-family: Arial, sans-serif;
     margin: 0 auto;
 }
 
