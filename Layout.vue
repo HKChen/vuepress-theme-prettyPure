@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import '@theme/styles/theme.scss'
+import './styles/theme.scss'
 
 import nprogress from 'nprogress'
 import Vue from 'vue'
-import Header from '@theme/components/Header'
-import Home from '@theme/layouts/Home'
-import Post from '@theme/layouts/Post'
-import Footer from '@theme/components/Footer'
+import Header from './components/Header'
+import Home from './layouts/Home'
+import Post from './layouts/Post'
+import Footer from './components/Footer'
 
 export default {
     name: 'Layout',
@@ -54,5 +54,3 @@ export default {
     }
 }
 </script>
-
-<style src="./styles/theme.css" />

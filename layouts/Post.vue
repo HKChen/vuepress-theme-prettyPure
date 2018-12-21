@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import '@theme/styles/post.scss'
+import './../styles/post.scss'
 
-import PostNavigation from '@theme/components/PostNavigation'
-import Disqus from '@theme/components/Disqus'
+import PostNavigation from './../components/PostNavigation'
+import Disqus from './../components/Disqus'
 
 export default {
     components: {
@@ -44,5 +44,3 @@ export default {
     }
 }
 </script>
-
-<style src="../styles/post.css" />

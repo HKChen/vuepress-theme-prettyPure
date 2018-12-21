@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import '@theme/styles/footer.scss'
+import './../styles/footer.scss'
 
 export default {
     name: 'Footer'

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import '@theme/styles/postPreview.scss'
+import './../styles/postPreview.scss'
 
 import { truncateString } from '../utils/index';
 

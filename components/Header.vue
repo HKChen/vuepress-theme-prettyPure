@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import '@theme/styles/header.scss'
+import './../styles/header.scss'
 
 export default {
     name: 'Header'

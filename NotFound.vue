@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Header from '@theme/components/Header'
-import Footer from '@theme/components/Footer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default {
     name: 'NotFound',
