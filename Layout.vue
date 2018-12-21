@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import '@theme/styles/theme.scss'
+
 import nprogress from 'nprogress'
 import Vue from 'vue'
 import Header from '@theme/components/Header'

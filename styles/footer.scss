@@ -1,5 +1,8 @@
 .pp-footer-text {
     text-align: center;
+    > a {
+        color: #000;
+    }
 }
 
 .pp-footer-text > a {

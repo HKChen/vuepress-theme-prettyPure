@@ -2,7 +2,7 @@
     <div class="post-preview" :style="`grid-column-end: ${fullWidth ? 'span 3' : 'initial'}`">
         <div class="post-wrapper">
             <h1 class="post-title">
-                <router-link :to="post.path" class="post-title-text">{{post.title}}</router-link>
+                <router-link :to="post.path">{{post.title}}</router-link>
             </h1>
             <span class="post-date">{{postDate}}</span>
             <div class="post-preview-content">
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import '@theme/styles/postPreview.scss'
+
 import { truncateString } from '../utils/index';
 
 export default {
@@ -36,5 +38,3 @@ export default {
     }
 }
 </script>
-
-<style src="../styles/postPreview.css" />

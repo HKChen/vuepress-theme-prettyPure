@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import '@theme/styles/postNavigation.scss'
+
 export default {
     name: 'PostNavigation',
 
@@ -45,5 +47,3 @@ export default {
     }
 }
 </script>
-
-<style src="../styles/postNavigation.css" />

@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import '@theme/styles/post.scss'
+
 import PostNavigation from '@theme/components/PostNavigation'
 import Disqus from '@theme/components/Disqus'
 

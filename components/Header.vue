@@ -8,9 +8,9 @@
 </template>
 
 <script>
+import '@theme/styles/header.scss'
+
 export default {
     name: 'Header'
 }
 </script>
-
-<style src="../styles/header.css" />

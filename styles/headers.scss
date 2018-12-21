@@ -1,20 +1,16 @@
-.pp-header {
-    padding: 0 1rem;
-}
-
 .pp-title {
     margin: 0 auto;
-    font-family: 'eutemia';
     font-size: 10rem;
     font-weight: 100;
     text-align: center;
     border-bottom: 1px solid #eee;
-}
-
-.pp-title>a {
-    color: #333;
+    > a {
+        font-family: 'Suggested';
+        color: #333;
+    }
 }
 
 .pp-solgan {
     font-size: 1rem;
+    padding-top: 1rem;
 }
