@@ -103,9 +103,14 @@ a {
 p>code {
     background: #eee;
     border-radius: 0.2rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0 10px;
     margin: 0 5px;
+}
+
+pre>code {
+    border-radius: 0.4rem;
+    font-size: 1rem;
 }
 
 .pp-container {
@@ -114,6 +119,10 @@ p>code {
 
 .pp-title {
     font-size: 10rem;
+}
+
+.post-content {
+    font-size: 1.2rem;
 }
 
 .disqus {
@@ -146,11 +155,35 @@ p>code {
     .pp-title {
         font-size: 7rem;
     }
+
+    .post-content {
+        font-size: 1.2rem;
+    }
+
+    p > code {
+        font-size: 1.3rem;
+    }
+
+    pre > code {
+        font-size: 1rem;
+    }
 }
 
 // < 576px
 @include media-breakpoint-down(xs) {
     .pp-title {
         font-size: 4.5rem;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+
+    p > code {
+        font-size: 1.2rem;
+    }
+
+    pre > code {
+        font-size: 0.9rem;
     }
 }
