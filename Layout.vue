@@ -38,7 +38,7 @@ export default {
     },
     mounted() {
         // progress bar configuration
-        nprogress.configure({ showSpinner: true })
+        nprogress.configure({ showSpinner: false })
 
         this.$router.beforeEach((to, from, next) => {
             if (to.path !== from.path) {
