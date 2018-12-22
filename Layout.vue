@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <Header />
         <div class="pp-container">
             <component class="pp-main-content" :is="layout" />

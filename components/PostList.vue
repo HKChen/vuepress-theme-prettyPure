@@ -1,5 +1,5 @@
 <template>
-    <div class="posts">
+    <div class="posts container">
         <slot />
         <PostPreview
             v-for="(post, index) in $postQuery(filter)"
