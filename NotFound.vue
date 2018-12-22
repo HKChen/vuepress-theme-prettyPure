@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div>
         <Header />
-        <div class="pp-container">
+        <div class="pp-container container">
             <h1 class="post-title">Oops!</h1>
             <div>
                 <h2>Not Found!?</h2>
