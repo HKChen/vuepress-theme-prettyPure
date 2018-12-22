@@ -1,4 +1,8 @@
-@import url(../styles/vendor/font-awesome.min.css);
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
 /**
  * Font Face
  */
@@ -108,30 +112,45 @@ p>code {
     border-bottom: 1px solid #eee;
 }
 
+.pp-title {
+    font-size: 10rem;
+}
+
+.disqus {
+    background-color: #eee;
+    margin-top: 2rem;
+}
+
 /**
  * RWD
  */
+// ≥ 1200px
+@include media-breakpoint-down(xl) {
 
-@media (max-width: 480px) {
+}
+
+// ≥ 992px
+@include media-breakpoint-down(lg) {
+
+}
+
+// ≥ 768px
+@include media-breakpoint-down(md) {
     .pp-title {
-        font-size: 3rem;
+        font-size: 8rem;
     }
 }
 
-@media (max-width: 768px) {
-    .pp-title {
-        font-size: 5rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 980px) {
+// ≥ 576px
+@include media-breakpoint-down(sm) {
     .pp-title {
         font-size: 7rem;
     }
 }
 
-@media (min-width: 981px) {
+// < 576px
+@include media-breakpoint-down(xs) {
     .pp-title {
-        font-size: 8rem;
+        font-size: 4.5rem;
     }
 }
