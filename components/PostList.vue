@@ -2,7 +2,7 @@
     <div class="posts container">
         <slot />
         <PostPreview
-            v-for="(post, index) in $postQuery(filter)"
+            v-for="(post, index) in listPosts"
             :post="post"
             :full-width="fullWidth"
             :key="index"
@@ -29,6 +29,11 @@ export default {
     },
     mounted() {
         this.fullWidth
-    }
+    },
+    computed: {
+        listPosts () {
+            return this.posts || this.$posts
+        }
+    },
 }
 </script>

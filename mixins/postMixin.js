@@ -47,16 +47,6 @@ export default {
             } = this.$site
 
             return postPath.startsWith(postDir || '/posts/')
-        },
-
-        $postQuery(filter) {
-            return this.$posts.filter(
-                typeof filter === 'function'
-                    ? filter
-                    : typeof filter === 'string'
-                        ? post => post.frontmatter[filter]
-                        : post => post
-            )
         }
     }
 }

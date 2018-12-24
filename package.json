@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/HKChen/vuepress-theme-prettyPure#readme",
   "dependencies": {
+    "@vuepress/plugin-pagination": "^1.0.0-alpha.0",
     "bootstrap": "^4.1.3",
     "date-fns": "^1.29.0",
     "font-awesome": "^4.7.0",
