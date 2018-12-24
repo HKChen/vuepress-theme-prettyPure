@@ -26,6 +26,7 @@
     "highlight.js": "^9.13.1",
     "jquery": "^3.3.1",
     "lodash.flatten": "^4.4.0",
+    "markdown-it": "^8.4.2",
     "nprogress": "^0.2.0",
     "popper.js": "^1.14.3",
     "vue": "^2.5.17",
