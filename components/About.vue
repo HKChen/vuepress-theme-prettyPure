@@ -6,11 +6,11 @@
                     <img :src="$withBase('/images/theme/avatar.jpg')">
                 </div>
                 <div class="pp-info">
-                    <h3 class="pp-name">HK Chen</h3>
-                    <p class="pp-says">我什麼都不會</p>
+                    <h3 class="pp-name">{{$site.themeConfig.author.name}}</h3>
+                    <p class="pp-says">{{$site.themeConfig.author.description}}</p>
                     <div class="pp-links">
-                        <a class="fa fa-envelope" href="mailto:ilikeiceblue@gmail.com"></a>
-                        <a class="fa fa-github-square" target="_blank" href="https://github.com/hkchen"></a>
+                        <a class="fa fa-envelope" :href="'mailto:' + $site.themeConfig.author.email"></a>
+                        <a class="fa fa-github-square" target="_blank" :href="$site.themeConfig.author.github"></a>
                     </div>
                 </div>
             </div>
