@@ -1,0 +1,67 @@
+@mixin font-size($remSize) {
+    $pxSize: $remSize * 10;
+
+    font-size: #{$pxSize}px;
+    font-size: #{$remSize}rem;
+}
+
+@mixin border-radius($radius) {
+    // $radius: 4px
+    border-radius: $radius;
+}
+
+.pp-about {
+    $block-height: 96px;
+    $avatar-size: 72px;
+    $padding-top-size: ($block-height - $avatar-size) / 2;
+
+    border-top: 1px solid #eee;
+    text-align: center;
+
+    .pp-block {
+        display: inline-block;
+        height: $block-height;
+        clear: both;
+    }
+
+    .pp-avatar {
+        float: left;
+        margin: $padding-top-size 25px 0 0;
+
+        img {
+            width: $avatar-size;
+            height: $avatar-size;
+            border: 1px solid #ccc;
+            @include border-radius($avatar-size / 2);
+        }
+    }
+
+    .pp-info {
+        padding-top: $padding-top-size;
+        float: left;
+        text-align: left;
+
+        .pp-name {
+            display: inline-block;
+            margin: 0;
+            height: $avatar-size / 2;
+            line-height: $avatar-size / 2;
+            @include font-size(1.2);
+        }
+
+        .pp-says {
+            display: inline-block;
+            margin: 0;
+            height: $avatar-size / 2;
+            line-height: $avatar-size / 2;
+            color: #666;
+            @include font-size(1);
+        }
+
+        .pp-links {
+            height: $avatar-size / 2;
+            line-height: $avatar-size / 2;
+            @include font-size(1.5);
+        }
+    }
+}

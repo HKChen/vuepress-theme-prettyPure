@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import './../styles/header.scss'
-
 export default {
     name: 'Header'
 }

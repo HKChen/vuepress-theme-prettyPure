@@ -1,87 +1,24 @@
-@import '~bootstrap/scss/bootstrap-grid.scss';
+/**
+ * Import 3rd-Party Libraries
+ */
+@import '~bootstrap/scss/bootstrap-grid';
 
 $fa-font-path: "~font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
+@import '~font-awesome/scss/font-awesome';
+
+// Syntax highlight
+@import 'highlight.js/styles/agate.css';
 
 /**
- * Font Face
+ * Import Styles
  */
-
-@font-face {
-    font-family: 'PT Serif';
-    font-style: normal;
-    font-weight: 400;
-    src: local('PT Serif'), local('PTSerif-Regular'), url(//themes.googleusercontent.com/static/fonts/ptserif/v4/sDRi4fY9bOiJUbgq53yZCfesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'PT Serif';
-    font-style: normal;
-    font-weight: 700;
-    src: local('PT Serif Bold'), local('PTSerif-Bold'), url(//themes.googleusercontent.com/static/fonts/ptserif/v4/QABk9IxT-LFTJ_dQzv7xpIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'PT Serif';
-    font-style: italic;
-    font-weight: 400;
-    src: local('PT Serif Italic'), local('PTSerif-Italic'), url(//themes.googleusercontent.com/static/fonts/ptserif/v4/03aPdn7fFF3H6ngCgAlQzBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'PT Serif';
-    font-style: italic;
-    font-weight: 700;
-    src: local('PT Serif Bold Italic'), local('PTSerif-BoldItalic'), url(//themes.googleusercontent.com/static/fonts/ptserif/v4/Foydq9xJp--nfYIx2TBz9QFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 100;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 300;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 400;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 500;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 700;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 900;
-    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Suggested';
-    src: url(../fonts/suggested.3d-filled-regular.ttf);
-}
-
+@import './theme/global';
+@import './theme/about';
+@import './theme/footer';
+@import './theme/header';
+@import './theme/post';
+@import './theme/postNavigation';
+@import './theme/postPreview';
 
 /**
  * Custom Theme
@@ -92,11 +29,23 @@ body {
     margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+	padding: 0;
+}
+
 a {
     color: #333;
     text-decoration: none;
     &:hover {
         color: #777;
+    }
+    > code {
+        background: #eee;
+        border-radius: 0.2rem;
+        font-size: 1.4rem;
+        padding: 0 10px;
+        margin: 0 5px;
     }
 }
 
@@ -117,12 +66,49 @@ pre>code {
     font-size: 10rem;
 }
 
+.post-date, .post-tags {
+    padding-top: 10px;
+}
+
 .post-content {
     font-size: 1.2rem;
 }
 
 .post-preview-content {
+    font-size: 1.2rem;
+    padding-top: 20px;
+    padding-bottom: 50px;
     text-align: left;
+}
+
+.post-param {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-date {
+    padding-right: 0.3rem;
+}
+
+.post-tags {
+    padding-right: 0.3rem;
+}
+
+.post-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+        > img {
+        max-width: 100%;
+    }
+}
+
+.pp-limiter {
+    margin: 0 auto;
+    padding: 25px 15px;
+    overflow: hidden;
 }
 
 .disqus {
@@ -156,11 +142,11 @@ pre>code {
         font-size: 7rem;
     }
 
-    .post-content {
+    .post-content, .post-links, .post-preview-content {
         font-size: 1.2rem;
     }
 
-    p > code {
+    p > code, a > code {
         font-size: 1.3rem;
     }
 
@@ -175,11 +161,11 @@ pre>code {
         font-size: 4.5rem;
     }
 
-    .post-content {
+    .post-content, .post-links, .post-preview-content,  {
         font-size: 1rem;
     }
 
-    p > code {
+    p > code, a > code {
         font-size: 1.2rem;
     }
 

@@ -5,32 +5,27 @@
                 <h1 class="post-title">
                     {{ $page.title }}
                 </h1>
-                <div class="post-date">
-                    <span>發佈時間(test)</span>
-                    {{ $page.frontmatter.date | dateFormat }}
+                <div class="post-param">
+                    <div class="post-date">
+                        <span>{{ $page.frontmatter.date | dateFormat }} / </span>
+                    </div>
+                    <div>
+                        <span v-for="(item, index) in $page.frontmatter.tag" :key="index" class="post-tags fa fa-tags">
+                            {{ item }}
+                        </span>
+                    </div>
                 </div>
                 <div class="post-content">
                     <Content :key="$page.path" />
                 </div>
-                <div class="post-tags">
-                    <span>Tags(test)</span>
-                    <ul>
-                        <li v-for="(item, index) in $page.frontmatter.tag" :key="index">
-                            {{ item }}
-                        </li>
-                    </ul>
-                </div>
-                <PostNavigation />
             </article>
-            {{ $page }}
         </div>
         <Disqus />
+        <PostNavigation />
     </div>
 </template>
 
 <script>
-import './../styles/post.scss'
-
 import PostNavigation from './../components/PostNavigation'
 import Disqus from './../components/Disqus'
 

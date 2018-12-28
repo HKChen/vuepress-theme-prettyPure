@@ -1,32 +1,29 @@
 <template>
-    <section
-        v-if="$page.frontmatter.type !== 'page'"
-        class="post-meta main-div"
-    >
-        <section class="post-links">
-            文章導頁(test)
-            <router-link
-                v-if="nextPost"
-                :to="nextPost.path"
-                class="post-link"
-            >
-                << {{ nextPost.title }}
-            </router-link>
-
-            <router-link
-                v-if="prevPost"
-                :to="prevPost.path"
-                class="post-link"
-            >
-                {{ prevPost.title }} >>
-            </router-link>
-        </section>
-    </section>
+    <div v-if="$page.frontmatter.type !== 'page'" class="pp-limiter container">
+        <div class="post-links row">
+            <span class="pp-prev col-xl-6 col-lg-6 col-sm-6 col-12">
+                <router-link
+                    v-if="nextPost"
+                    :to="nextPost.path"
+                    class="post-link"
+                >
+                    {{ nextPost.title }}
+                </router-link>
+            </span>
+            <span class="pp-next col-xl-6 col-lg-6 col-sm-6 col-12">
+                <router-link
+                    v-if="prevPost"
+                    :to="prevPost.path"
+                    class="post-link"
+                >
+                    {{ prevPost.title }}
+                </router-link>
+            </span>
+        </div>
+    </div>
 </template>
 
 <script>
-import './../styles/postNavigation.scss'
-
 export default {
     name: 'PostNavigation',
 

@@ -1,7 +1,5 @@
 import postMixin from '@theme/mixins/postMixin'
-import VueHighlightJs from 'vue-highlight.js';
-import 'highlight.js/styles/monokai-sublime.css'
-//import themeMixin from './mixins/themeMixin'
+import VueHighlightJs from 'vue-highlight.js'
 
 export default ({ Vue, options, router, siteData: { themeConfig } }) => {
     Vue.use(VueHighlightJs)
@@ -9,12 +7,10 @@ export default ({ Vue, options, router, siteData: { themeConfig } }) => {
     Vue.mixin({
         computed: {
             ...postMixin.computed,
-            // ...themeMixin.computed
         },
 
         methods: {
             ...postMixin.methods,
-            // ...themeMixin.methods
         }
     })
 }

@@ -79,11 +79,3 @@ export const stripMd = (md, options = {}) => {
     }
     return output
 }
-
-/**
- * @param {String} string String to truncate.
- * @param {Number} max Truncate treshold. Defaults to 85
- */
-export const truncateString = (string, max = 85) => {
-    return string.length > max ? string.substring(0, max) + '...' : string
-}

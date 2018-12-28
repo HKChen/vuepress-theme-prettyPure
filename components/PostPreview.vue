@@ -4,18 +4,14 @@
             <h1 class="post-title">
                 <router-link :to="post.path">{{post.title}}</router-link>
             </h1>
-            <span class="post-date">{{postDate}}</span>
-            <div class="post-preview-content">
-                {{postPreview}}
-            </div>
+            <div class="post-date">{{postDate}}</div>
+            <div class="post-preview-content" v-html="postPreview"></div>
         </div>
     </div>
 </template>
 
 <script>
-import './../styles/postPreview.scss'
-
-import { truncateString } from '../utils/index';
+import he from 'he/he'
 
 export default {
     props: {
@@ -29,7 +25,7 @@ export default {
     },
     computed: {
         postPreview() {
-            return truncateString(this.post.preview.plain, 98)
+             return he.decode(this.post.preview.rendered).replace(/<p>(.*?)<\/p>/, '$1')
         },
         postDate() {
             const { frontmatter: { date } } = this.post

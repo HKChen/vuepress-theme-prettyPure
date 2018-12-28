@@ -1,16 +1,10 @@
 <template>
     <footer class="pp-footer">
-        <p class="pp-footer-text">Copyright © HK Chen
-            <a href="https://github.com/hkchen" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-        </p>
+        <p class="pp-footer-text">Copyright © HK Chen</p>
     </footer>
 </template>
 
 <script>
-import './../styles/footer.scss'
-
 export default {
     name: 'Footer'
 }

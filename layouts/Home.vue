@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import PostList from '@theme/components/PostList'
+import PostList from './../components/PostList'
 
 export default {
     components: {

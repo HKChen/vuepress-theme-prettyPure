@@ -1,0 +1,18 @@
+.post-links {
+    font-size: 1.2rem;
+}
+
+.pp-prev {
+    :before {
+        font-family: 'FontAwesome';
+        content: '\f100';
+    }
+}
+
+.pp-next {
+    text-align: right;
+    :after {
+        font-family: 'FontAwesome';
+        content: '\f101';
+    }
+}
