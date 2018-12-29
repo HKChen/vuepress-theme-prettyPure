@@ -1,8 +1,18 @@
-import postMixin from '@theme/mixins/postMixin'
+import postMixin from './mixins/postMixin'
 import VueHighlightJs from 'vue-highlight.js'
+import Vuetify from 'vuetify/es5/components/Vuetify'
+import VPagination from 'vuetify/es5/components/VPagination'
 
-export default ({ Vue, options, router, siteData: { themeConfig } }) => {
+const Layout = () => import('./Layout')
+
+export default ({ Vue, router, siteData: { themeConfig } }) => {
     Vue.use(VueHighlightJs)
+
+    Vue.use(Vuetify, {
+        components: {
+            VPagination
+        }
+    })
 
     Vue.mixin({
         computed: {
@@ -13,4 +23,11 @@ export default ({ Vue, options, router, siteData: { themeConfig } }) => {
             ...postMixin.methods,
         }
     })
+
+    router.addRoutes([
+        {
+            path: themeConfig.pagination.path,
+            component: Layout
+        }
+    ])
 }

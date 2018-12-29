@@ -7,9 +7,10 @@
                 </h1>
                 <div class="post-param">
                     <div class="post-date">
-                        <span>{{ $page.frontmatter.date | dateFormat }} / </span>
+                        <span>{{ $page.frontmatter.date | dateFormat }}</span>
                     </div>
-                    <div>
+                    <div v-if="$page.frontmatter.tag">
+                        /
                         <span v-for="(item, index) in $page.frontmatter.tag" :key="index" class="post-tags fa fa-tags">
                             {{ item }}
                         </span>

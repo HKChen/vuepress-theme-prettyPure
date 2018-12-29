@@ -32,7 +32,7 @@ export default {
     computed: {
         layout() {
             const { path } = this.$page
-            return (path === '/') ? 'home' : 'post'
+            return (path === '/' || path === '') ? 'home' : 'post'
         },
 
         pageClasses() {

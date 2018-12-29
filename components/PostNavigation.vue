@@ -1,45 +1,61 @@
 <template>
-    <div v-if="$page.frontmatter.type !== 'page'" class="pp-limiter container">
-        <div class="post-links row">
-            <span class="pp-prev col-xl-6 col-lg-6 col-sm-6 col-12">
-                <router-link
-                    v-if="nextPost"
-                    :to="nextPost.path"
-                    class="post-link"
-                >
-                    {{ nextPost.title }}
-                </router-link>
-            </span>
-            <span class="pp-next col-xl-6 col-lg-6 col-sm-6 col-12">
-                <router-link
-                    v-if="prevPost"
-                    :to="prevPost.path"
-                    class="post-link"
-                >
-                    {{ prevPost.title }}
-                </router-link>
-            </span>
-        </div>
+    <div class="posts container" style="text-align: center">
+        <slot />
+        <PostPreview
+            v-for="(post, index) in pageList"
+            :post="post"
+            :full-width="fullWidth"
+            :key="index"
+        />
+        <v-pagination :length="pagesLength" color="#777"
+            v-model="pageNum"
+            prev-icon="fa-chevron-left"
+            next-icon="fa-chevron-right">
+        </v-pagination>
     </div>
 </template>
 
 <script>
+import PostPreview from './PostPreview'
+
 export default {
-    name: 'PostNavigation',
-
+    components: {
+        PostPreview
+    },
+    props: {
+        data: Array,
+        current: {
+            type: [Number, String],
+            default: 1
+        },
+        filter: {
+            type: String && Function,
+            default: null
+        },
+        fullWidth: {
+            required: false,
+            default: false
+        }
+    },
     computed: {
-        thisIndex() {
-            return  this.$posts.findIndex(obj => obj.key == this.$page.key)
+        pageNum: {
+            get() {
+                return Number(this.current)
+            },
+            set(val) {
+                this.$emit('change', val)
+            }
         },
-
-        prevPost() {
-            const nextIndex = this.thisIndex + 1
-            return nextIndex > this.$posts.length - 1 ? null : this.$posts[nextIndex]
+        pageSize() {
+            return this.$site.themeConfig.pagination.pageSize
         },
-
-        nextPost() {
-            const prevIndex = this.thisIndex - 1
-            return prevIndex < 0 ? null : this.$posts[prevIndex]
+        pagesLength() {
+            return Math.ceil(this.data.length / this.pageSize)
+        },
+        pageList() {
+            const begin = (this.pageNum - 1) * this.pageSize
+            const end = begin + this.pageSize
+            return this.data.filter((item, i) => i >= begin && i < end)
         }
     }
 }
