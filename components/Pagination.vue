@@ -7,11 +7,10 @@
             :full-width="fullWidth"
             :key="index"
         />
-        <v-pagination :length="pagesLength" color="#777"
+        <v-pagination :length="pagesLength" :total-visible="7" color="#777"
             v-model="pageNum"
             prev-icon="fa-chevron-left"
-            next-icon="fa-chevron-right">
-        </v-pagination>
+            next-icon="fa-chevron-right" dark />
     </div>
 </template>
 
